@@ -18,7 +18,9 @@ const Cart = () =>{
         </Box>
         <Box className="boxButtons">
         <Link to ='/' style={{textDecoration: 'none'}}><Button variant='contained' color='success'>CONTINUAR COMPRANDO</Button></Link>
+        {(useCtx.cartList.length > 0) &&
         <Button variant="outlined" color="error" onClick={()=>useCtx.clearCartList()}>ELIMINAR TODO</Button>
+        }
         </Box>
         <Box className="boxContainer">
             {
